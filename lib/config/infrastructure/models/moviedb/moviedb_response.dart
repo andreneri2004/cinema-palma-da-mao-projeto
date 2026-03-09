@@ -16,7 +16,7 @@ class MoveDbResponse {
   });
 
   factory MoveDbResponse.fromJson(Map<String, dynamic> json) => MoveDbResponse(
-    dates: json["dates"] ? Dates.fromJson(json["dates"]) : null,
+    dates: json["dates"] != null ? Dates.fromJson(json["dates"]) : null,
     page: json["page"],
     results: List<MovieMovieDb>.from(
       json["results"].map((x) => MovieMovieDb.fromJson(x)),
@@ -26,7 +26,7 @@ class MoveDbResponse {
   );
 
   Map<String, dynamic> toJson() => {
-    "dates": dates == null ? null : dates!.toJson(),
+    "dates": dates?.toJson(),
     "page": page,
     "results": List<dynamic>.from(results.map((x) => x.toJson())),
     "total_pages": totalPages,

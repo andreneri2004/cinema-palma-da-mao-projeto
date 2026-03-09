@@ -38,6 +38,8 @@ dependencies:
   flutter_dotenv: ^6.0.0
   dio: ^5.9.2
   flutter_riverpod: ^3.2.1
+  card_swiper: ^3.0.1
+  animate_do: ^4.2.0
 
 dev_dependencies:
   flutter_test:

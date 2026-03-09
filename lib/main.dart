@@ -6,7 +6,7 @@ import 'package:neri_cinema/config/theme/app_theme.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
-  const ProviderScope(child: MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
